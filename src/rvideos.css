@@ -1,0 +1,117 @@
+.rvideos{
+    background-color: rgb(19, 18, 18);
+    position: relative;
+    flex: 0.85;
+    overflow-x: hidden;
+}
+.top{
+    display: flex;
+    height: 40px;
+    width: inherit;
+    padding: 5px;
+    background-color: rgb(44, 44, 44);
+    border-top: 0.01px solid rgb(61, 61, 61);
+    border-bottom: 0.01px solid rgb(61, 61, 61);
+    align-items: center;
+    overflow-x: auto;
+}
+.top::-webkit-scrollbar{
+    display: none;
+}
+
+.top__card{
+    color: white;
+    font-family: arial;
+    margin-right: 20px;
+    background-color: rgb(124, 124, 124);
+    height: 10px;
+    min-width: fit-content;
+    padding: 10px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+.top__card__active{
+    background-color: rgb(235, 235, 235);
+    color: rgb(24, 24, 24);
+}
+.top__card:nth-child(1){
+    margin-left: 30px;
+}
+
+.down{
+    flex: 1;
+    min-width: 220px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.video__card{
+    width: 280px;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-bottom: 15px;
+    position: relative;
+    margin-left: 15px;
+}
+.video__card .img__box{
+    width: inherit;
+    height: 50%;
+    background-color: rgb(204, 204, 204);
+    position: relative;
+}
+.img__box img{
+    width: inherit;
+    height: 100%;
+}
+.time__indicator{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgb(19, 19, 19);
+    color: white;
+    border-radius: 5px;
+    width: fit-content;
+    padding-right: 3px;
+    padding-left: 3px;
+    height: 20px;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vid__title__and__avatar{
+    display: flex;
+    font-family: arial;
+    font-size: 15px;
+    letter-spacing: 0.5;
+    padding: 10px;
+}
+.avatar__icon{
+    font-size: 50px !important;
+    color: rgb(75, 75, 75);
+    size: 30px;
+}
+.vid__text{
+    margin-left: 10px;
+}
+.vid__username__and__views{
+    font-weight: 300;
+    margin-top: 10px;
+    color: rgb(114, 113, 113);
+}
+
+
+@media(max-width : '620px'){
+    .video__card{
+        width: 400px;
+        height: 550px;
+    }
+}
